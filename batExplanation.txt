@@ -1,0 +1,43 @@
+This is how you properly code a .BAT file to execute a python code!
+
+To do this we use the Notepad app.
+First we define the @echo statement to off
+Then we provide a path to the python file we'd like to execute, like this:
+
+--------
+
+@echo off
+python (your Python file path here) example: C:\Users\%USER%\Desktop\pythonCode.py
+
+--------
+
+After that make sure to save the .txt file as .bat instead:
+
+your_file_name.txt  >>>  your_file_name.bat
+
+
+
+
+Troubleshooting:
+
+If for any reason the .bat file opens for a split second then closes, or doesn't open at all, open up your CMD command prompt and write in 'python --version'.
+
+After hitting enter you should get something like: Python 3.10.6
+
+Otherwise if there's an error or nothing at all, first make sure you have Python installed correctly, and if you do, hit the windows key and type in "Environment Variables" in the search bar. (Windows 11)
+As a window opens at the bottom of it click "Environment Variables..."
+
+Clicking that button should open another window with a bunch of variables.
+Search for the "Path" in the variable section, then double click it.
+
+Another window should pop up with a bunch of options.
+Hit "New" and add the path to your python program (this will depend on where you installed your Python app), then apply.
+Hit "New" once again and add the same path followed by \Scripts\
+
+If you have a line that starts with %USERPROFILE%, make sure to move that line to the very bottom of the variables, 
+by clicking on it and pressing "Move Down" until it's at the bottom.
+
+After doing this, start up the CMD again, and execute 'python --version' and it should display the correct thing.
+You may need to restart your PC after doing so to apply the changes in some cases.
+
+And that's about it!
